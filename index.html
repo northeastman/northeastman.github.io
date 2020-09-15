@@ -5,17 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>后来</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="后来">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="后来">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="后来" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -36,7 +36,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">后来</a>
       </h1>
       
     </div>
@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
@@ -114,7 +114,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/15/hello-world/">第一天的博客</a>
+      <a class="article-title" href="/2020/09/15/hello-world/">使用GitHub Pages + hexo搭建博客</a>
     </h1>
   
 
@@ -122,19 +122,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>第一篇个人博客，记录一下整个下午搭建博客的流程。</p>
+<h2 id="第一步：注册GitHub-在GitHub上新建仓库，settings配置GitHub-Pages"><a href="#第一步：注册GitHub-在GitHub上新建仓库，settings配置GitHub-Pages" class="headerlink" title="第一步：注册GitHub,在GitHub上新建仓库，settings配置GitHub Pages"></a>第一步：注册GitHub,在GitHub上新建仓库，settings配置GitHub Pages</h2><h2 id="第二步：安装git和node-js"><a href="#第二步：安装git和node-js" class="headerlink" title="第二步：安装git和node.js"></a>第二步：安装git和node.js</h2><h2 id="第三步：安装hexo-使用hexo写页面"><a href="#第三步：安装hexo-使用hexo写页面" class="headerlink" title="第三步：安装hexo,使用hexo写页面"></a>第三步：安装hexo,使用hexo写页面</h2><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>选择一个磁盘，新建一个文件夹，自己重命名文件夹（如：我的文件夹为：F\hexo_blog），博客相关文件将储存在此文件夹下，在该文件夹下右键鼠标，点击 Git Bash Here，输入以下 npm 命令即可安装，第一个命令表示安装 hexo，第二个命令表示安装 hexo 部署到 git page 的 deployer</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g  </span><br><span class="line">$ npm install hexo-deployer-git --save </span><br></pre></td></tr></table></figure>
+<h3 id="hexo初始化配置"><a href="#hexo初始化配置" class="headerlink" title="hexo初始化配置"></a>hexo初始化配置</h3><p>在刚才新建的文件夹里面再次新建一个 hexo 文件夹（如：我的文件夹为：F\hexo_blog\hexo）,进入该 hexo 文件夹右键鼠标，点击 Git Bash Here，输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<h3 id="本地运行hexo测试"><a href="#本地运行hexo测试" class="headerlink" title="本地运行hexo测试"></a>本地运行hexo测试</h3><p>输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>登录 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 查看效果</p>
+<h2 id="第四步：将本地仓库上传到GitHub"><a href="#第四步：将本地仓库上传到GitHub" class="headerlink" title="第四步：将本地仓库上传到GitHub"></a>第四步：将本地仓库上传到GitHub</h2><h3 id="配置SSH秘钥"><a href="#配置SSH秘钥" class="headerlink" title="配置SSH秘钥"></a>配置SSH秘钥</h3><p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：Ｅ\TRHX_Blog） Git Bash Here 输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;your email@example.com&quot;</span> </span><br><span class="line">//引号里面填写你的邮箱地址，比如我的是tanrenhou@126.com</span><br><span class="line">//接下来不用输入，回车就可以</span><br></pre></td></tr></table></figure>
+<p>生成的秘钥在/c/Users/you/.ssh/id_rsa.  和   /c/Users/you/.ssh/id_rsa.pub.<br>登录GitHub点击Settings再点击SSH and GPG keys选择New SSH key然后粘贴秘钥Title可以随便写，id_rsa粘贴到Key中，点击Add SSH key</p>
 
       
     </div>
@@ -165,9 +163,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li></ul>
     </div>
   </div>
 
@@ -175,7 +173,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
@@ -184,7 +182,7 @@
           </li>
         
           <li>
-            <a href="/2020/09/15/hello-world/">第一天的博客</a>
+            <a href="/2020/09/15/hello-world/">使用GitHub Pages + hexo搭建博客</a>
           </li>
         
       </ul>
