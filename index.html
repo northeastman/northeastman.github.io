@@ -64,9 +64,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-测试" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-blog01" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/15/%E6%B5%8B%E8%AF%95/" class="article-date">
+    <a href="/2020/09/15/blog01/" class="article-date">
   <time datetime="2020-09-15T08:33:20.000Z" itemprop="datePublished">2020-09-15</time>
 </a>
     
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/15/%E6%B5%8B%E8%AF%95/">测试</a>
+      <a class="article-title" href="/2020/09/15/blog01/">读论文感受</a>
     </h1>
   
 
@@ -86,11 +86,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="《基于显著区域的立体图像饱和度舒适范围测定》"><a href="#《基于显著区域的立体图像饱和度舒适范围测定》" class="headerlink" title="《基于显著区域的立体图像饱和度舒适范围测定》"></a>《基于显著区域的立体图像饱和度舒适范围测定》</h2><h3 id="1、提取立体图像中的显著区域"><a href="#1、提取立体图像中的显著区域" class="headerlink" title="1、提取立体图像中的显著区域"></a>1、提取立体图像中的显著区域</h3><p>人脑观测图片的点是有限的，所以要提取显著区域。<br>立体显著度图：立体图像视差图 和 二维图像显著图 进行线性加权<br>采用GBVS算法得到右视点二维图像显著图<br>采用快速立体匹配算法得到以右视点为基准的视差图<br>显著立体图像：立体显著度图（灰度图像，还是不太明显）==》根据阈值转化为掩膜        图像（二值图像）==》使用开闭运算优化得到优化掩膜图像<br>原图像点乘优化掩膜图像==》显著立体图像</p>
+<h3 id="2、眼动仪实验验证，显著区域提取是否正确"><a href="#2、眼动仪实验验证，显著区域提取是否正确" class="headerlink" title="2、眼动仪实验验证，显著区域提取是否正确"></a>2、眼动仪实验验证，显著区域提取是否正确</h3><h3 id="3、饱和度分析"><a href="#3、饱和度分析" class="headerlink" title="3、饱和度分析"></a>3、饱和度分析</h3><p>RGB==&gt;HSV，一张图像有很多饱和度，立体图像（左、右视图），不同饱和度的左、右视图组合太多，不方便计算，采用逐级逼近法（先用大步长，再用小步长进行细化），最后分析出舒适饱和度。<br>实验所得立体图像舒适饱和度匹配图和立体图像舒适饱和度差异图能够很好地反映立体图像的舒适与否。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/15/%E6%B5%8B%E8%AF%95/" data-id="ckf3q3j6h0000ccts4bsy0ctg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/15/blog01/" data-id="ckf54n05i0001ogts0x4q70iw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -130,9 +132,18 @@
 <h3 id="本地运行hexo测试"><a href="#本地运行hexo测试" class="headerlink" title="本地运行hexo测试"></a>本地运行hexo测试</h3><p>输入以下命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>登录 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 查看效果</p>
-<h2 id="第四步：将本地仓库上传到GitHub"><a href="#第四步：将本地仓库上传到GitHub" class="headerlink" title="第四步：将本地仓库上传到GitHub"></a>第四步：将本地仓库上传到GitHub</h2><h3 id="配置SSH秘钥"><a href="#配置SSH秘钥" class="headerlink" title="配置SSH秘钥"></a>配置SSH秘钥</h3><p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：Ｅ\TRHX_Blog） Git Bash Here 输入以下命令：</p>
+<h2 id="第四步：本地Git链接GitHub，将本地仓库上传到GitHub"><a href="#第四步：本地Git链接GitHub，将本地仓库上传到GitHub" class="headerlink" title="第四步：本地Git链接GitHub，将本地仓库上传到GitHub"></a>第四步：本地Git链接GitHub，将本地仓库上传到GitHub</h2><h3 id="配置SSH秘钥"><a href="#配置SSH秘钥" class="headerlink" title="配置SSH秘钥"></a>配置SSH秘钥</h3><p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：Ｅ\TRHX_Blog） Git Bash Here 输入以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;your email@example.com&quot;</span> </span><br><span class="line">//引号里面填写你的邮箱地址，比如我的是tanrenhou@126.com</span><br><span class="line">//接下来不用输入，回车就可以</span><br></pre></td></tr></table></figure>
-<p>生成的秘钥在/c/Users/you/.ssh/id_rsa.  和   /c/Users/you/.ssh/id_rsa.pub.<br>登录GitHub点击Settings再点击SSH and GPG keys选择New SSH key然后粘贴秘钥Title可以随便写，id_rsa粘贴到Key中，点击Add SSH key</p>
+<p>生成的秘钥在/c/Users/you/.ssh/id_rsa. 和/c/Users/you/.ssh/id_rsa.pub. </p>
+<h3 id="在-GitHub-账户中添加你的公钥"><a href="#在-GitHub-账户中添加你的公钥" class="headerlink" title="在 GitHub 账户中添加你的公钥"></a>在 GitHub 账户中添加你的公钥</h3><p>登录GitHub点击Settings再点击SSH and GPG keys选择New SSH key然后粘贴秘钥Title可以随便写，id_rsa粘贴到Key中，点击Add SSH key</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">//然后再输入yes</span><br></pre></td></tr></table></figure>
+<h3 id="配置-Git-个人信息"><a href="#配置-Git-个人信息" class="headerlink" title="配置 Git 个人信息"></a>配置 Git 个人信息</h3><p>输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;此处填你的用户名&quot;</span>  </span><br><span class="line">$ git config --global user.email  <span class="string">&quot;此处填你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+<p>到此为止 SSH Key 配置成功，本机已成功连接到 Github</p>
+<h3 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h3><p>① 登录 Github 打开自己的项目 你的名字.github.io（如：northeastman.github.io）<br>② 鼠标移到 Clone or download 按钮，选择 Use SSH<br>③ 一键复制地址<br>④ 打开你创建的 Hexo 文件夹（如：F\hexo_blog\hexo），右键用记事本（Notepad++或者VS code等都可以）打开该文件夹下的 _config.yml 文件<br>⑤ 按下图修改 _config.yml 文件并保存<br><img src="a.png"><br>⑥ 在 Hexo 文件夹下分别执行以下命令<br>输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br><span class="line">//此命令将本地仓库同步到GitHub上</span><br><span class="line">//执行完之后会让你输入你的 Github 的账号和密码，如果此时报以下错误，说明你的 deployer 没有安装成功</span><br><span class="line">//ERROR Deployer not found: git</span><br><span class="line"></span><br><span class="line">//需要执行以下命令再安装一次：</span><br><span class="line"></span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">//再执行 hexo g -d，你的博客就会部署到 Github 上了</span><br></pre></td></tr></table></figure>
+<p>⑦ 访问博客<br>你的博客地址：https://你的用户名.github.io，比如我的是：<a target="_blank" rel="noopener" href="https://northeastman.github.io/">https://northeastman.github.io</a> ,现在每个人都可以通过此链接访问你的博客了</p>
 
       
     </div>
@@ -178,7 +189,7 @@
       <ul>
         
           <li>
-            <a href="/2020/09/15/%E6%B5%8B%E8%AF%95/">测试</a>
+            <a href="/2020/09/15/blog01/">读论文感受</a>
           </li>
         
           <li>

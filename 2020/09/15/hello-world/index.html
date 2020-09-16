@@ -14,10 +14,12 @@
 <meta property="og:site_name" content="后来">
 <meta property="og:description" content="第一篇个人博客，记录一下整个下午搭建博客的流程。 第一步：注册GitHub,在GitHub上新建仓库，settings配置GitHub Pages第二步：安装git和node.js第三步：安装hexo,使用hexo写页面安装hexo选择一个磁盘，新建一个文件夹，自己重命名文件夹（如：我的文件夹为：F\hexo_blog），博客相关文件将储存在此文件夹下，在该文件夹下右键鼠标，点击 Git Bash">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2020/09/15/hello-world/a.png">
 <meta property="article:published_time" content="2020-09-15T08:13:26.924Z">
-<meta property="article:modified_time" content="2020-09-15T12:56:43.575Z">
+<meta property="article:modified_time" content="2020-09-16T08:31:02.853Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/15/hello-world/a.png">
   
     <link rel="alternate" href="/atom.xml" title="后来" type="application/atom+xml">
   
@@ -96,9 +98,18 @@
 <h3 id="本地运行hexo测试"><a href="#本地运行hexo测试" class="headerlink" title="本地运行hexo测试"></a>本地运行hexo测试</h3><p>输入以下命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>登录 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 查看效果</p>
-<h2 id="第四步：将本地仓库上传到GitHub"><a href="#第四步：将本地仓库上传到GitHub" class="headerlink" title="第四步：将本地仓库上传到GitHub"></a>第四步：将本地仓库上传到GitHub</h2><h3 id="配置SSH秘钥"><a href="#配置SSH秘钥" class="headerlink" title="配置SSH秘钥"></a>配置SSH秘钥</h3><p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：Ｅ\TRHX_Blog） Git Bash Here 输入以下命令：</p>
+<h2 id="第四步：本地Git链接GitHub，将本地仓库上传到GitHub"><a href="#第四步：本地Git链接GitHub，将本地仓库上传到GitHub" class="headerlink" title="第四步：本地Git链接GitHub，将本地仓库上传到GitHub"></a>第四步：本地Git链接GitHub，将本地仓库上传到GitHub</h2><h3 id="配置SSH秘钥"><a href="#配置SSH秘钥" class="headerlink" title="配置SSH秘钥"></a>配置SSH秘钥</h3><p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：Ｅ\TRHX_Blog） Git Bash Here 输入以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;your email@example.com&quot;</span> </span><br><span class="line">//引号里面填写你的邮箱地址，比如我的是tanrenhou@126.com</span><br><span class="line">//接下来不用输入，回车就可以</span><br></pre></td></tr></table></figure>
-<p>生成的秘钥在/c/Users/you/.ssh/id_rsa.  和   /c/Users/you/.ssh/id_rsa.pub.<br>登录GitHub点击Settings再点击SSH and GPG keys选择New SSH key然后粘贴秘钥Title可以随便写，id_rsa粘贴到Key中，点击Add SSH key</p>
+<p>生成的秘钥在/c/Users/you/.ssh/id_rsa. 和/c/Users/you/.ssh/id_rsa.pub. </p>
+<h3 id="在-GitHub-账户中添加你的公钥"><a href="#在-GitHub-账户中添加你的公钥" class="headerlink" title="在 GitHub 账户中添加你的公钥"></a>在 GitHub 账户中添加你的公钥</h3><p>登录GitHub点击Settings再点击SSH and GPG keys选择New SSH key然后粘贴秘钥Title可以随便写，id_rsa粘贴到Key中，点击Add SSH key</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">//然后再输入yes</span><br></pre></td></tr></table></figure>
+<h3 id="配置-Git-个人信息"><a href="#配置-Git-个人信息" class="headerlink" title="配置 Git 个人信息"></a>配置 Git 个人信息</h3><p>输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;此处填你的用户名&quot;</span>  </span><br><span class="line">$ git config --global user.email  <span class="string">&quot;此处填你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+<p>到此为止 SSH Key 配置成功，本机已成功连接到 Github</p>
+<h3 id="将本地的-Hexo-文件更新到-Github-的库中"><a href="#将本地的-Hexo-文件更新到-Github-的库中" class="headerlink" title="将本地的 Hexo 文件更新到 Github 的库中"></a>将本地的 Hexo 文件更新到 Github 的库中</h3><p>① 登录 Github 打开自己的项目 你的名字.github.io（如：northeastman.github.io）<br>② 鼠标移到 Clone or download 按钮，选择 Use SSH<br>③ 一键复制地址<br>④ 打开你创建的 Hexo 文件夹（如：F\hexo_blog\hexo），右键用记事本（Notepad++或者VS code等都可以）打开该文件夹下的 _config.yml 文件<br>⑤ 按下图修改 _config.yml 文件并保存<br><img src="a.png"><br>⑥ 在 Hexo 文件夹下分别执行以下命令<br>输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br><span class="line">//此命令将本地仓库同步到GitHub上</span><br><span class="line">//执行完之后会让你输入你的 Github 的账号和密码，如果此时报以下错误，说明你的 deployer 没有安装成功</span><br><span class="line">//ERROR Deployer not found: git</span><br><span class="line"></span><br><span class="line">//需要执行以下命令再安装一次：</span><br><span class="line"></span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">//再执行 hexo g -d，你的博客就会部署到 Github 上了</span><br></pre></td></tr></table></figure>
+<p>⑦ 访问博客<br>你的博客地址：https://你的用户名.github.io，比如我的是：<a target="_blank" rel="noopener" href="https://northeastman.github.io/">https://northeastman.github.io</a> ,现在每个人都可以通过此链接访问你的博客了</p>
 
       
     </div>
@@ -112,11 +123,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/09/15/%E6%B5%8B%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/15/blog01/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          测试
+          读论文感受
         
       </div>
     </a>
@@ -156,7 +167,7 @@
       <ul>
         
           <li>
-            <a href="/2020/09/15/%E6%B5%8B%E8%AF%95/">测试</a>
+            <a href="/2020/09/15/blog01/">读论文感受</a>
           </li>
         
           <li>
