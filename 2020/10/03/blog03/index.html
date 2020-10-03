@@ -294,12 +294,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-10-03 16:32:08'>2020-10-03 00:00</time>
+            发布时间 : <time class="date" title='最后更新: 2020-10-03 16:36:33'>2020-10-03 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:279</span>
+        <span>字数:276</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -318,7 +318,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%94%A8-conda-%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83-tensorflow-python-3-6"><span class="toc-text">1、用 conda 创建虚拟环境 tensorflow python&#x3D;3.6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E5%8C%85"><span class="toc-text">2、安装常用包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85-tensorflow"><span class="toc-text">3、安装 tensorflow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85-keras"><span class="toc-text">4、安装 keras</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%B0%9D%E8%AF%95%E5%AF%BC%E5%85%A5-tensorflow-%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="toc-text">5、尝试导入 tensorflow 进行测试</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -337,17 +337,13 @@
         <p>keras相当于接口，可以通过keras来简单的使用TensorFlow等其他的一些库。</p>
 <p>说明：此操作是在 Anaconda Prompt 窗口完成的 CPU版 tensorflow 的安装。</p>
 <p>在Navigator中可以看到图形显示。</p>
-<p>##1、用 conda 创建虚拟环境 tensorflow python=3.6</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda create -n tensorflow python=3.6</span><br><span class="line">conda activate tensorflow    <span class="comment"># 启用创建的环境</span></span><br></pre></td></tr></table></figure>
+<h2 id="1、用-conda-创建虚拟环境-tensorflow-python-3-6"><a href="#1、用-conda-创建虚拟环境-tensorflow-python-3-6" class="headerlink" title="1、用 conda 创建虚拟环境 tensorflow python=3.6"></a>1、用 conda 创建虚拟环境 tensorflow python=3.6</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda create -n tensorflow python=3.6</span><br><span class="line">conda activate tensorflow    <span class="comment"># 启用创建的环境</span></span><br></pre></td></tr></table></figure>
 <p>安装了anaconda之后，在base环境中自带了一个版本的python,同时spyder也使用的这个base的python。<br>此版本python与tensorflow不兼容，所以安装一个新的python环境。</p>
-<p>１、创建虚拟环境：<br>Anaconda创建环境：比如，创建pyhon＝3.6的版本环境取名叫 nlp<br>conda create -n nlp python=3.6<br>2、删除虚拟环境操作：（谨慎操作）<br>conda remove -n nlp –all<br>３、激活环境<br>conda activate nlp<br>4、查看所有环境<br>conda env list<br>##2、安装常用包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda install numpy</span><br><span class="line">conda install scipy</span><br><span class="line">conda install pandas</span><br><span class="line">conda install xlrd    <span class="comment"># 使 pandas 读取 Excel 表格的包</span></span><br><span class="line">conda install xlwt    <span class="comment"># 使 pandas 写入 Excel 表格的包</span></span><br><span class="line">conda install scikit-learn</span><br></pre></td></tr></table></figure>
-<p>##3、安装 tensorflow</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install tensorflow==1.10.0</span><br></pre></td></tr></table></figure>
-<p>##4、安装 keras</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnda install keras==2.2.0</span><br></pre></td></tr></table></figure>
-<p>##5、尝试导入 tensorflow 进行测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python    <span class="comment"># 打开 python 解释器</span></span><br><span class="line">import tensorflow as tf</span><br></pre></td></tr></table></figure>
+<p>１、创建虚拟环境：<br>Anaconda创建环境：比如，创建pyhon＝3.6的版本环境取名叫 nlp<br>conda create -n nlp python=3.6<br>2、删除虚拟环境操作：（谨慎操作）<br>conda remove -n nlp –all<br>３、激活环境<br>conda activate nlp<br>4、查看所有环境<br>conda env list</p>
+<h2 id="2、安装常用包"><a href="#2、安装常用包" class="headerlink" title="2、安装常用包"></a>2、安装常用包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda install numpy</span><br><span class="line">conda install scipy</span><br><span class="line">conda install pandas</span><br><span class="line">conda install xlrd    <span class="comment"># 使 pandas 读取 Excel 表格的包</span></span><br><span class="line">conda install xlwt    <span class="comment"># 使 pandas 写入 Excel 表格的包</span></span><br><span class="line">conda install scikit-learn</span><br></pre></td></tr></table></figure>
+<h2 id="3、安装-tensorflow"><a href="#3、安装-tensorflow" class="headerlink" title="3、安装 tensorflow"></a>3、安装 tensorflow</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install tensorflow==1.10.0</span><br></pre></td></tr></table></figure>
+<h2 id="4、安装-keras"><a href="#4、安装-keras" class="headerlink" title="4、安装 keras"></a>4、安装 keras</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnda install keras==2.2.0</span><br></pre></td></tr></table></figure>
+<h2 id="5、尝试导入-tensorflow-进行测试"><a href="#5、尝试导入-tensorflow-进行测试" class="headerlink" title="5、尝试导入 tensorflow 进行测试"></a>5、尝试导入 tensorflow 进行测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python    <span class="comment"># 打开 python 解释器</span></span><br><span class="line">import tensorflow as tf</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
