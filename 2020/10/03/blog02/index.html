@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>关于 | 后来</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="关于 | 后来">
+  <title>初识Anaconda | 后来</title>
+  <meta name="keywords" content=" 技术 ">
+  <meta name="description" content="初识Anaconda | 后来">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
@@ -267,24 +267,39 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-blog02" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">关于</h1>
+        <h1 class="article-title">初识Anaconda</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="技术">技术</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">技术</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-09-17 08:19:11'>2020-09-17 08:16</time>
+            发布时间 : <time class="date" title='最后更新: 2020-10-03 16:08:48'>2020-10-03 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:326</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -303,7 +318,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%EF%BC%9APython%E8%A7%A3%E9%87%8A%E5%99%A8-pytorch%E7%BC%96%E8%BE%91%E5%99%A8-pip%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">一：Python解释器+pytorch编辑器+pip包管理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%EF%BC%9AAnaconda%E3%80%81Miniconda"><span class="toc-text">二：Anaconda、Miniconda</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Anaconda"><span class="toc-text">1、Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Miniconda"><span class="toc-text">2、Miniconda</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%EF%BC%9AJupyter-NoteBook%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">三：Jupyter NoteBook的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="toc-text">1、设置文件目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%9B%AE%E5%BD%95"><span class="toc-text">2、修改默认目录</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -319,7 +334,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>简述Anaconda的使用心得。</p>
+<h2 id="一：Python解释器-pytorch编辑器-pip包管理器"><a href="#一：Python解释器-pytorch编辑器-pip包管理器" class="headerlink" title="一：Python解释器+pytorch编辑器+pip包管理器"></a>一：Python解释器+pytorch编辑器+pip包管理器</h2><h2 id="二：Anaconda、Miniconda"><a href="#二：Anaconda、Miniconda" class="headerlink" title="二：Anaconda、Miniconda"></a>二：Anaconda、Miniconda</h2><h3 id="1、Anaconda"><a href="#1、Anaconda" class="headerlink" title="1、Anaconda"></a>1、Anaconda</h3><p>Anaconda包含：python解释器+spyder编辑器+conda包管理器(Anaconda Prompt)+navigator图形界面包管理器+ipython+Jupyter NoteBook(web版交互窗口)</p>
+<h3 id="2、Miniconda"><a href="#2、Miniconda" class="headerlink" title="2、Miniconda"></a>2、Miniconda</h3><p>python解释器+conda包管理器(Anaconda Prompt)</p>
+<h2 id="三：Jupyter-NoteBook的使用"><a href="#三：Jupyter-NoteBook的使用" class="headerlink" title="三：Jupyter NoteBook的使用"></a>三：Jupyter NoteBook的使用</h2><p>发展过程：python shell&gt;&gt;&gt;ipython shell&gt;&gt;&gt;Jupyter QTConsole&gt;&gt;&gt;Jupyter(ipython) NoteBook</p>
+<h3 id="1、设置文件目录"><a href="#1、设置文件目录" class="headerlink" title="1、设置文件目录"></a>1、设置文件目录</h3><p>查看默认目录结构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line"><span class="built_in">print</span>(os.path.abspath(<span class="string">&#x27;.&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<p>如下图：<br><img src="1.png"></p>
+<h3 id="2、修改默认目录"><a href="#2、修改默认目录" class="headerlink" title="2、修改默认目录"></a>2、修改默认目录</h3><ol>
+<li>首先要找到配置文件位置。</li>
+</ol>
+<p>在开始菜单里找到并打开Anaconda Prompt，输入如下命令，然后执行。</p>
+<p>jupyter notebook –generate-config</p>
+<ol start="2">
+<li>打开上一步生成的配置文件:</li>
+</ol>
+<p>C:\Users\Administrator.jupyter\jupyter_notebook_config.py</p>
+<p>实际上，C:\Users\Administrator就是Jupyter notebook的默认路径</p>
+<ol start="3">
+<li>在jupyter_notebook_config.py中找到并修改如下配置项:</li>
+</ol>
+<p>修改前:  #c.NotebookApp.notebook_dir = ‘’</p>
+<p>删除前面的 # 号，在后面的单引号里输入要设置的目录路径，保存关闭。</p>
+<p>我的修改: c.NotebookApp.notebook_dir = ‘G:\机器学习\Jupyter_PRJ’</p>
+<ol start="4">
+<li>找到jupyter notebook快捷图标，鼠标右键&gt;&gt;属性&gt;&gt;快捷方式&gt;&gt;目标</li>
+</ol>
+<p>删除最后的 “%USERPROFILE%/“ 。</p>
+<ol start="5">
+<li>OK，现在单击刚修改的jupyter notebook快捷图标，打开的jupyter 就是刚配置的目录。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
